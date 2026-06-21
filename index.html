@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pressed Perfection Nails</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{
 margin:0;
@@ -50,7 +51,7 @@ color:#ff4f9b;
 }
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 .card{
@@ -65,14 +66,11 @@ transform:translateY(-5px);
 }
 .card img{
 width:100%;
-height:250px;
+height:300px;
 object-fit:cover;
 }
 .card-content{
 padding:20px;
-}
-.card h3{
-margin-bottom:10px;
 }
 .price{
 font-size:1.4rem;
@@ -90,16 +88,27 @@ color:white;
 border-radius:12px;
 cursor:pointer;
 font-size:1rem;
+margin-bottom:10px;
 }
-.about{
-background:white;
-text-align:center;
-padding:60px 10%;
+form{
+margin-top:15px;
+display:flex;
+flex-direction:column;
+gap:12px;
 }
-.about p{
-max-width:700px;
-margin:auto;
-line-height:1.8;
+input, textarea{
+padding:12px;
+border-radius:10px;
+border:1px solid #ddd;
+}
+form button{
+background:#ff4f9b;
+color:white;
+padding:12px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:1rem;
 }
 footer{
 background:#ffb6d9;
@@ -110,87 +119,75 @@ margin-top:40px;
 }
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>💅 Pressed Perfection</h1>
+<h1>💅 Pressed Perfection Nails</h1>
 <p>Luxury Handmade Press-On Nails</p>
 <a href="#shop" class="btn">Shop Now</a>
 </header>
+
 <section id="shop">
-<h2 class="section-title">🎨 Painted Nail Sets (£15)</h2>
+<h2 class="section-title">Choose Your Nail Set</h2>
+
 <div class="products">
+
+<!-- SIMPLE DESIGN -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800" alt="">
+<img src="IMAGE_1_URL_HERE" alt="Simple Nail Design">
 <div class="card-content">
-<h3>Pink French Tips</h3>
-<p>Classic elegant design.</p>
+<h3>Simple Nail Design</h3>
+<p>Hand-painted simple design. Upload your inspo photo below.</p>
 <div class="price">£15</div>
-<button class="buy-btn">Add to Cart</button>
+
+<a href="https://buy.stripe.com/test_dRm3cvb3400EbKK1EybEA01">
+<button class="buy-btn">Buy Now (£15)</button>
+</a>
+
+<form action="https://formspree.io/f/mayvjjqz" method="POST" enctype="multipart/form-data">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="details" placeholder="Describe your inspo or request" required></textarea>
+<label>Upload Inspo Photo:</label>
+<input type="file" name="inspo" accept="image/*" required>
+<button type="submit">Send Inspo</button>
+</form>
+
 </div>
 </div>
+
+<!-- COMPLEX DESIGN -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=800" alt="">
+<img src="IMAGE_2_URL_HERE" alt="Complex Nail Design">
 <div class="card-content">
-<h3>Cherry Nails</h3>
-<p>Cute hand-painted cherries.</p>
-<div class="price">£15</div>
-<button class="buy-btn">Add to Cart</button>
+<h3>Complex Nail Design</h3>
+<p>3D, gems, bows, or detailed artwork. Upload your inspo photo below.</p>
+<div class="price">£20</div>
+
+<a href="https://buy.stripe.com/test_eVq6oHgno6p2166ab4bEA02">
+<button class="buy-btn">Buy Now (£20)</button>
+</a>
+
+<form action="https://formspree.io/f/mayvjjqz" method="POST" enctype="multipart/form-data">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="details" placeholder="Describe your inspo or request" required></textarea>
+<label>Upload Inspo Photo:</label>
+<input type="file" name="inspo" accept="image/*" required>
+<button type="submit">Send Inspo</button>
+</form>
+
 </div>
 </div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=800" alt="">
-<div class="card-content">
-<h3>Ombre Pink</h3>
-<p>Soft pink gradient finish.</p>
-<div class="price">£15</div>
-<button class="buy-btn">Add to Cart</button>
-</div>
-</div>
+
 </div>
 </section>
-<section>
-<h2 class="section-title">✨ Premium 3D Sets (£20)</h2>
-<div class="products">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800" alt="">
-<div class="card-content">
-<h3>Pearl Princess</h3>
-<p>Pearls and luxury details.</p>
-<div class="price">£20</div>
-<button class="buy-btn">Add to Cart</button>
-</div>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=800" alt="">
-<div class="card-content">
-<h3>Crystal Glam</h3>
-<p>Sparkly rhinestone design.</p>
-<div class="price">£20</div>
-<button class="buy-btn">Add to Cart</button>
-</div>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=800" alt="">
-<div class="card-content">
-<h3>Coquette Bow Set</h3>
-<p>Bows, gems & 3D art.</p>
-<div class="price">£20</div>
-<button class="buy-btn">Add to Cart</button>
-</div>
-</div>
-</div>
-</section>
-<section class="about">
-<h2 class="section-title">Why Choose Us?</h2>
-<p>
-Every nail set is handmade with love. Our press-on nails are reusable,
-comfortable and designed to make you feel confident. Choose from simple
-painted styles for £15 or premium 3D luxury designs for £20.
-</p>
-</section>
+
 <footer>
 <p>💖 Pressed Perfection Nails | Handmade in the UK</p>
-<p>Instagram: @pressedperfection</p>
+<p>Contact: pressednailsxo@gmail.com</p>
 </footer>
+
 </body>
 </html>
