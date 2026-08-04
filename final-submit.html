@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submitting Order…</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+background:#FFF7FA;
+font-family:'Poppins',sans-serif;
+text-align:center;
+padding:60px 20px;
+color:#333;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Submitting your order…</h2>
+<p>Please wait a moment.</p>
+
+<form id="finalForm"
+      action="https://formsubmit.co/pressednailsxo@gmail.com"
+      method="POST"
+      enctype="multipart/form-data">
+
+<!-- Disable captcha -->
+<input type="hidden" name="_captcha" value="false">
+
+<!-- Redirect after email is sent -->
+<input type="hidden" name="_next" value="https://websitexo.github.io/thank-you.html">
+
+<!-- Hidden fields from Step 1 -->
+<input type="hidden" name="design_type" id="design_type">
+<input type="hidden" name="length" id="length">
+<input type="hidden" name="details" id="details">
+<input type="hidden" name="email" id="email">
+
+<!-- Hidden fields from Step 2 (finger photos) -->
+<input type="file" name="thumb" id="thumb" style="display:none;">
+<input type="file" name="index" id="index" style="display:none;">
+<input type="file" name="middle" id="middle" style="display:none;">
+<input type="file" name="ring" id="ring" style="display:none;">
+<input type="file" name="pinky" id="pinky" style="display:none;">
+
+</form>
+
+<script>
+// Auto-submit the form
+document.getElementById('finalForm').submit();
+</script>
+
+</body>
+</html>
