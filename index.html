@@ -3,72 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Press on Nails – Home</title>
+<title>Upload Inspo & Nail Sizes</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
-background:#FFF7FA;
-font-family:'Poppins',sans-serif;
-margin:0;
-padding:0;
-color:#333;
-}
-header{
-background:linear-gradient(135deg,#F8C8DC,#FDE6EF);
-padding:60px 20px;
-text-align:center;
-color:white;
-}
-.products{
-padding:40px 8%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-.card{
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-transition:.3s;
-}
-.card:hover{
-transform:translateY(-5px);
-}
-.card img{
-width:100%;
-height:300px;
-object-fit:cover;
-}
-.card-content{
-padding:20px;
-}
-.price{
-font-size:1.4rem;
-font-weight:bold;
-color:#F4AFC1;
-margin:10px 0;
-}
-.btn{
-display:block;
+body{background:#FFF7FA;font-family:'Poppins',sans-serif;margin:0;padding:0;color:#333;}
+header{background:linear-gradient(135deg,#F8C8DC,#FDE6EF);padding:60px 20px;text-align:center;color:white;}
+.section{padding:40px 8%;}
+.container{background:white;padding:25px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,.08);}
+label{font-weight:600;margin-top:15px;display:block;}
+input, textarea{
 width:100%;
 padding:12px;
+margin-top:8px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:1rem;
+}
+.submit-btn{
+margin-top:20px;
+padding:14px;
 background:#F4AFC1;
 color:white;
-border:none;
+text-align:center;
 border-radius:12px;
-cursor:pointer;
-font-size:1rem;
-text-align:center;
 text-decoration:none;
-}
-footer{
-background:#F8C8DC;
-padding:25px;
-text-align:center;
-color:white;
-margin-top:40px;
+font-size:1.1rem;
+border:none;
+cursor:pointer;
+width:100%;
 }
 </style>
 </head>
@@ -76,40 +39,38 @@ margin-top:40px;
 <body>
 
 <header>
-<h1>Press on Nails🩷</h1>
-<p>Handmade custom Press-On Nails</p>
+<h1>Upload Your Inspo & Nail Sizes</h1>
+<p>Submit everything here — no Google Forms needed.</p>
 </header>
 
-<section class="products">
+<section class="section">
+<div class="container">
 
-<!-- SIMPLE DESIGN CARD -->
-<div class="card">
-<img src="https://github.com/websitexo/Press-on-nails/raw/66ce5cfdf74c53f9b85d5ae1577aad078d0f41a0/IMG_2639.jpeg" alt="Simple Nail Design">
-<div class="card-content">
-<h3>Simple Nail Design</h3>
-<p>Hand-painted simple design. Comes with glue, mini file, acetone wipe and cuticle pusher.</p>
-<div class="price">£15</div>
-<a href="simple-step1.html" class="btn">Start Simple Design</a>
-</div>
-</div>
+<form action="https://formsubmit.co/pressednailsxo@gmail.com" method="POST" enctype="multipart/form-data">
 
-<!-- COMPLEX DESIGN CARD -->
-<div class="card">
-<img src="https://github.com/websitexo/Press-on-nails/raw/66ce5cfdf74c53f9b85d5ae1577aad078d0f41a0/IMG_6073.jpeg" alt="Complex Nail Design">
-<div class="card-content">
-<h3>Complex Nail Design</h3>
-<p>3D, gems, chrome, or detailed artwork. Comes with glue, mini file, acetone wipe and cuticle pusher.</p>
-<div class="price">£20</div>
-<a href="complex-step1.html" class="btn">Start Complex Design</a>
-</div>
-</div>
+<!-- Prevent spam -->
+<input type="hidden" name="_captcha" value="false">
 
+<!-- Redirect after submit -->
+<input type="hidden" name="_next" value="https://websitexo.github.io/thank-you.html">
+
+<label>Upload Inspo Photos (up to 3)</label>
+<input type="file" name="inspo1" accept="image/*">
+<input type="file" name="inspo2" accept="image/*">
+<input type="file" name="inspo3" accept="image/*">
+
+<label>Nail Measurements (Thumb → Pinky)</label>
+<input type="text" name="measurements" placeholder="Example: 16mm, 14mm, 13mm, 12mm, 10mm" required>
+
+<label>Notes / Design Details</label>
+<textarea name="notes" rows="5" placeholder="Tell me your colours, shape, length, gems, chrome, etc."></textarea>
+
+<button class="submit-btn" type="submit">Submit Order</button>
+
+</form>
+
+</div>
 </section>
-
-<footer>
-<p>💖 Press on Nails | Handmade in the UK</p>
-<p>Contact: pressednailsxo@gmail.com</p>
-</footer>
 
 </body>
 </html>
