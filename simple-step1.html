@@ -42,10 +42,12 @@ display:block;text-align:center;
 <section class="section">
 <div class="container">
 
-<form action="measurements-simple.html" method="GET">
+<form action="measurements-simple.html" method="POST" enctype="multipart/form-data">
+
+<input type="hidden" name="design_type" value="£15 Simple">
 
 <label>Upload Inspo Photo</label>
-<input type="file" required>
+<input type="file" name="inspo" required>
 
 <label>Preferred Length</label>
 <input type="text" name="length" placeholder="Short / Medium / Long" required>
@@ -65,4 +67,3 @@ display:block;text-align:center;
 
 </body>
 </html>
-
