@@ -6,13 +6,6 @@
 <title>Press on Nails</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- ⭐ UPLOADCARE ⭐ -->
-<script>
-  UPLOADCARE_PUBLIC_KEY = "YOUR_PUBLIC_KEY_HERE";
-  UPLOADCARE_TABS = "file camera url";
-</script>
-<script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
-
 <style>
 *{
 margin:0;
@@ -99,40 +92,22 @@ cursor:pointer;
 font-size:1rem;
 margin-bottom:10px;
 }
-form{
-margin-top:15px;
-display:flex;
-flex-direction:column;
-gap:12px;
+
+/* Google Form container */
+.google-form-container {
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    margin-top:20px;
 }
-input, textarea{
-padding:12px;
-border-radius:10px;
-border:1px solid #ddd;
-}
-form button{
-background:#F4AFC1;
-color:white;
-padding:12px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-font-size:1rem;
-}
+
 footer{
 background:#F8C8DC;
 padding:25px;
 text-align:center;
 color:white;
 margin-top:40px;
-}
-
-/* Uploadcare styling */
-.uploadcare--widget {
-    width: 100%;
-    background: #F8C8DC;
-    border-radius: 12px;
-    padding: 10px;
 }
 </style>
 </head>
@@ -155,24 +130,20 @@ margin-top:40px;
 <img src="https://raw.githubusercontent.com/BioTutorPrep/Press-on-nails/9bf32da4a0aa7d421b49c2710ae544e13337a196/IMG_2111.jpeg" alt="Simple Nail Design">
 <div class="card-content">
 <h3>Simple Nail Design</h3>
-<p>Hand-painted simple design. Comes with glue, mini file, acetone wipe and cuticle pusher. Upload your inspo photo below.</p>
+<p>Hand-painted simple design. Comes with glue, mini file, acetone wipe and cuticle pusher.</p>
 <div class="price">£15</div>
 
 <a href="https://buy.stripe.com/dRm8wPbbPcMmba8cWGcMM00">
 <button class="buy-btn">Buy Now (£15)</button>
 </a>
 
-<form action="https://formspree.io/f/mlgyrqnk" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="_replyto" placeholder="Your Email" required>
-<textarea name="details" placeholder="Describe your inspo and length" required></textarea>
+<h4 style="margin-top:20px; color:#F4AFC1;">Upload Your Inspo Photo</h4>
 
-<label>Upload Inspo Photo:</label>
-<input type="hidden" role="uploadcare-uploader" name="inspo" data-crop="disabled" />
-
-<input type="hidden" name="_subject" value="New Simple Design Inspo">
-<button type="submit">Send Inspo</button>
-</form>
+<div class="google-form-container">
+<!-- ⭐ REPLACE THIS IFRAME WITH YOUR GOOGLE FORM EMBED ⭐ -->
+<iframe src="YOUR_GOOGLE_FORM_EMBED_LINK_HERE"
+width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
 
 </div>
 </div>
@@ -182,24 +153,20 @@ margin-top:40px;
 <img src="https://raw.githubusercontent.com/BioTutorPrep/Press-on-nails/9bf32da4a0aa7d421b49c2710ae544e13337a196/IMG_2106.jpeg" alt="Complex Nail Design">
 <div class="card-content">
 <h3>Complex Nail Design</h3>
-<p>3D, gems, chrome, or detailed artwork. Comes with glue, mini file, acetone wipe and cuticle pusher. Upload your inspo photo below.</p>
+<p>3D, gems, chrome, or detailed artwork. Comes with glue, mini file, acetone wipe and cuticle pusher.</p>
 <div class="price">£20</div>
 
 <a href="https://buy.stripe.com/8x2fZheo1aEecece0KcMM01">
 <button class="buy-btn">Buy Now (£20)</button>
 </a>
 
-<form action="https://formspree.io/f/mlgyrqnk" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="_replyto" placeholder="Your Email" required>
-<textarea name="details" placeholder="Describe your inspo and length" required></textarea>
+<h4 style="margin-top:20px; color:#F4AFC1;">Upload Your Inspo Photo</h4>
 
-<label>Upload Inspo Photo:</label>
-<input type="hidden" role="uploadcare-uploader" name="inspo" data-crop="disabled" />
-
-<input type="hidden" name="_subject" value="New Complex Design Inspo">
-<button type="submit">Send Inspo</button>
-</form>
+<div class="google-form-container">
+<!-- ⭐ REPLACE THIS IFRAME WITH YOUR GOOGLE FORM EMBED ⭐ -->
+<iframe src="YOUR_GOOGLE_FORM_EMBED_LINK_HERE"
+width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
 
 </div>
 </div>
@@ -212,34 +179,17 @@ margin-top:40px;
 
 <p style="text-align:center; max-width:700px; margin:0 auto 30px; font-size:1.1rem;">
 To make sure your press-on nails fit perfectly, please measure your natural nails using a UK coin.
-Take a clear photo of each nail next to a <strong>10p</strong>, <strong>20p</strong>, or <strong>50p</strong> coin and upload it using the form below.
+Take a clear photo of each nail next to a <strong>10p</strong>, <strong>20p</strong>, or <strong>50p</strong> coin and upload it below.
 </p>
 
-<div style="max-width:700px; margin:0 auto; background:white; padding:25px; border-radius:20px; box-shadow:0 5px 20px rgba(0,0,0,.08);">
+<div class="google-form-container">
+<h3 style="color:#F4AFC1; margin-bottom:10px;">Upload Your Nail Measurement Photos</h3>
 
-<h3 style="color:#F4AFC1; margin-bottom:10px;">How to Measure</h3>
-<ul style="line-height:1.7; margin-bottom:20px;">
-<li>Place your finger on a flat surface.</li>
-<li>Put a <strong>10p, 20p, or 50p</strong> coin next to the nail.</li>
-<li>Make sure both the nail and coin are visible.</li>
-<li>Take a clear photo (one photo per hand is fine).</li>
-<li>Upload the photos using the form below.</li>
-</ul>
-
-<form action="https://formspree.io/f/mlgyrqnk" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="_replyto" placeholder="Your Email" required>
-
-<label>Upload Your Nail Measurement Photos:</label>
-<input type="hidden" role="uploadcare-uploader" name="measurement_photos" data-multiple="true" />
-
-<textarea name="notes" placeholder="Any extra details (optional)"></textarea>
-
-<input type="hidden" name="_subject" value="New Nail Measurement Upload">
-<button type="submit">Send Measurements</button>
-</form>
-
+<!-- ⭐ REPLACE THIS IFRAME WITH YOUR MEASUREMENT GOOGLE FORM EMBED ⭐ -->
+<iframe src="YOUR_GOOGLE_MEASUREMENT_FORM_EMBED_LINK_HERE"
+width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
+
 </section>
 
 <footer>
