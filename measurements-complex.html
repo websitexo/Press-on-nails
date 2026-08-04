@@ -78,8 +78,11 @@ img{
 <img src="IMG_2152.jpeg" alt="Measurement Example">
 
 <!-- ⭐ FULL WORKING FORM BELOW ⭐ -->
-<form action="https://formsubmit.co/pressednailsxo@gmail.com" 
-      method="POST" 
+<form onsubmit="goToPayment(); return false;">
+function goToPayment() {
+    window.location.href = "payment.html";
+}
+
       enctype="multipart/form-data">
 
 <!-- Redirect after email -->
