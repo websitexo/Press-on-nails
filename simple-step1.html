@@ -61,6 +61,14 @@ display:block;text-align:center;
 <input type="email" name="email" required>
 
 <button class="next-btn" type="submit">Continue</button>
+<script>
+document.querySelector('form').addEventListener('submit', () => {
+    sessionStorage.setItem('design_type', document.querySelector('input[name="design_type"]').value);
+    sessionStorage.setItem('length', document.querySelector('input[name="length"]').value);
+    sessionStorage.setItem('details', document.querySelector('textarea[name="details"]').value);
+    sessionStorage.setItem('email', document.querySelector('input[name="email"]').value);
+});
+</script>
 
 </form>
 
