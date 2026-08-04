@@ -3,78 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Press on Nails</title>
+<title>Press on Nails – Home</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
 body{
 background:#FFF7FA;
+font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
 color:#333;
 }
 header{
 background:linear-gradient(135deg,#F8C8DC,#FDE6EF);
-padding:80px 20px;
+padding:60px 20px;
 text-align:center;
-}
-header h1{
-font-size:3rem;
-margin-bottom:10px;
-color:#fff;
-}
-header p{
-font-size:1.2rem;
 color:white;
-margin-bottom:25px;
+}
+.products{
+padding:40px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-5px);
+}
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+.card-content{
+padding:20px;
+}
+.price{
+font-size:1.4rem;
+font-weight:bold;
+color:#F4AFC1;
+margin:10px 0;
 }
 .btn{
-background:white;
-color:#F4AFC1;
-padding:12px 28px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-}
-
-section{
-padding:60px 8%;
-}
-.section-title{
-text-align:center;
-font-size:2rem;
-margin-bottom:40px;
-color:#F4AFC1;
-}
-
-.google-form-container{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-margin-top:20px;
-}
-
-.next-btn{
 display:block;
 width:100%;
-padding:14px;
+padding:12px;
 background:#F4AFC1;
 color:white;
 border:none;
 border-radius:12px;
-font-size:1.1rem;
-text-align:center;
-margin-top:20px;
 cursor:pointer;
+font-size:1rem;
+text-align:center;
 text-decoration:none;
 }
-
 footer{
 background:#F8C8DC;
 padding:25px;
@@ -90,50 +78,32 @@ margin-top:40px;
 <header>
 <h1>Press on Nails🩷</h1>
 <p>Handmade custom Press-On Nails</p>
-<a href="#inspo" class="btn">Start Your Order</a>
 </header>
 
-<!-- ⭐ STEP 1 — INSPO FORM -->
-<section id="inspo">
-<h2 class="section-title">Step 1: Upload Your Inspo</h2>
+<section class="products">
 
-<div class="google-form-container">
-<iframe 
-src="https://docs.google.com/forms/d/e/18DnCGOlI__q9paLMYyeNb1eqE1C9Ro9izeeeI3pRkdU/viewform?embedded=true"
-width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
-Loading…
-</iframe>
+<!-- SIMPLE DESIGN CARD -->
+<div class="card">
+<img src="https://raw.githubusercontent.com/BioTutorPrep/Press-on-nails/main/IMG_2111.jpeg" alt="Simple Nail Design">
+<div class="card-content">
+<h3>Simple Nail Design</h3>
+<p>Hand-painted simple design. Comes with glue, mini file, acetone wipe and cuticle pusher.</p>
+<div class="price">£15</div>
+<a href="simple-step1.html" class="btn">Start Simple Design</a>
+</div>
 </div>
 
-<a href="#size-guide" class="next-btn">Continue to Size Guide</a>
-</section>
-
-<!-- ⭐ STEP 2 — SIZE GUIDE FORM -->
-<section id="size-guide">
-<h2 class="section-title">Step 2: Upload Your Nail Measurements</h2>
-
-<div class="google-form-container">
-<iframe 
-src="https://docs.google.com/forms/d/e/15AADyBAKnw2NkGDgIPJLueREClgK0erTjtsDi-pgK1o/viewform?embedded=true"
-width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
-Loading…
-</iframe>
+<!-- COMPLEX DESIGN CARD -->
+<div class="card">
+<img src="https://raw.githubusercontent.com/BioTutorPrep/Press-on-nails/main/IMG_2106.jpeg" alt="Complex Nail Design">
+<div class="card-content">
+<h3>Complex Nail Design</h3>
+<p>3D, gems, chrome, or detailed artwork. Comes with glue, mini file, acetone wipe and cuticle pusher.</p>
+<div class="price">£20</div>
+<a href="complex-step1.html" class="btn">Start Complex Design</a>
+</div>
 </div>
 
-<a href="#payment" class="next-btn">Continue to Payment</a>
-</section>
-
-<!-- ⭐ STEP 3 — PAYMENT -->
-<section id="payment">
-<h2 class="section-title">Step 3: Choose Your Nail Set</h2>
-
-<div class="google-form-container">
-<h3 style="color:#F4AFC1;">Simple Design (£15)</h3>
-<a href="https://buy.stripe.com/dRm8wPbbPcMmba8cWGcMM00" class="next-btn">Pay £15</a>
-
-<h3 style="color:#F4AFC1; margin-top:30px;">Complex Design (£20)</h3>
-<a href="https://buy.stripe.com/8x2fZheo1aEecece0KcMM01" class="next-btn">Pay £20</a>
-</div>
 </section>
 
 <footer>
