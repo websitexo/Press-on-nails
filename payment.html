@@ -5,56 +5,72 @@
     <title>Payment</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fff5f9;
+            color: #333;
             text-align: center;
-            padding: 40px;
+            padding: 50px 20px;
         }
+
         h2 {
-            margin-bottom: 20px;
+            font-size: 28px;
+            color: #ff6fa8;
+            margin-bottom: 10px;
         }
+
         p {
-            margin-bottom: 30px;
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: #555;
         }
+
         .btn {
             display: block;
-            width: 250px;
+            width: 80%;
+            max-width: 300px;
             margin: 15px auto;
-            padding: 15px 30px;
+            padding: 15px 25px;
             font-size: 18px;
             border: none;
-            border-radius: 8px;
-            color: white;
+            border-radius: 12px;
             cursor: pointer;
+            transition: 0.2s ease;
         }
+
         .simple {
-            background-color: #ff69b4;
+            background-color: #ff8fbf;
+            color: white;
         }
+
         .simple:hover {
-            background-color: #ff85c2;
+            background-color: #ff6fa8;
         }
+
         .complex {
-            background-color: #6a5acd;
+            background-color: #c7a6ff;
+            color: white;
         }
+
         .complex:hover {
-            background-color: #7b6fe0;
+            background-color: #b48cff;
         }
     </style>
 </head>
 <body>
 
     <h2>Complete Your Payment</h2>
-    <p>You will be redirected to Stripe Checkout.</p>
+    <p>Select your nail type below to continue.</p>
 
     <!-- SIMPLE NAILS PAYMENT -->
     <button class="btn simple"
         onclick="window.location.href='https://buy.stripe.com/dRm8wPbbPcMmba8cWGcMM00'">
-        Pay Now (Simple Nails)
+        Simple Nails – Pay £15
     </button>
 
     <!-- COMPLEX NAILS PAYMENT -->
     <button class="btn complex"
         onclick="window.location.href='https://buy.stripe.com/8x2fZheo1aEecece0KcMM01'">
-        Pay Now (Complex Nails)
+        Complex Nails – Pay £20
     </button>
 
 </body>
