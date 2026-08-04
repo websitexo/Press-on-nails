@@ -1,69 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment – Step 3</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-body{background:#FFF7FA;font-family:'Poppins',sans-serif;margin:0;padding:0;color:#333;}
-header{
-background:linear-gradient(135deg,#F8C8DC,#FDE6EF);
-padding:50px 20px;
-text-align:center;
-color:white;
-}
-.section{padding:40px 8%;}
-.container{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-text-align:center;
-}
-button{
-margin-top:20px;
-padding:14px;
-background:#F4AFC1;
-color:white;
-border-radius:12px;
-font-size:1.1rem;
-border:none;
-cursor:pointer;
-width:100%;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: block;
+            width: 250px;
+            margin: 15px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+        }
+        .simple {
+            background-color: #ff69b4;
+        }
+        .simple:hover {
+            background-color: #ff85c2;
+        }
+        .complex {
+            background-color: #6a5acd;
+        }
+        .complex:hover {
+            background-color: #7b6fe0;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-<h1>Payment</h1>
-<p>Step 3: Complete your order</p>
-</header>
+    <h2>Complete Your Payment</h2>
+    <p>You will be redirected to Stripe Checkout.</p>
 
-<section class="section">
-<div class="container">
+    <!-- SIMPLE NAILS PAYMENT -->
+    <button class="btn simple"
+        onclick="window.location.href='https://buy.stripe.com/dRm8wPbbPcMmba8cWGcMM00'">
+        Pay Now (Simple Nails)
+    </button>
 
-<h2>Select Your Design</h2>
-
-<!-- SIMPLE BUTTON -->
-<form action="https://buy.stripe.com/dRm8wPbbPcMmba8cWGcMM00" method="GET">
-<button type="submit">Pay £15 – Simple Design</button>
-</form>
-
-<!-- COMPLEX BUTTON -->
-<form action="https://buy.stripe.com/8x2fZheo1aEecece0KcMM0" method="GET">
-<button type="submit">Pay £20 – Complex Design</button>
-</form>
-
-<p style="margin-top:20px;font-size:0.9rem;color:#777;">
-You will be redirected to Stripe’s secure checkout.
-</p>
-
-</div>
-</section>
+    <!-- COMPLEX NAILS PAYMENT -->
+    <button class="btn complex"
+        onclick="window.location.href='https://buy.stripe.com/8x2fZheo1aEecece0KcMM01'">
+        Pay Now (Complex Nails)
+    </button>
 
 </body>
 </html>
