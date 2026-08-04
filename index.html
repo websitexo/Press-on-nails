@@ -14,7 +14,6 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-/* ⭐ PASTEL COLOURS ⭐ */
 body{
 background:#FFF7FA;
 color:#333;
@@ -42,6 +41,7 @@ border-radius:30px;
 text-decoration:none;
 font-weight:600;
 }
+
 section{
 padding:60px 8%;
 }
@@ -51,55 +51,28 @@ font-size:2rem;
 margin-bottom:40px;
 color:#F4AFC1;
 }
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-.card{
+
+.google-form-container{
 background:white;
+padding:25px;
 border-radius:20px;
-overflow:hidden;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
-transition:.3s;
-}
-.card:hover{
-transform:translateY(-5px);
-}
-.card img{
-width:100%;
-height:300px;
-object-fit:cover;
-}
-.card-content{
-padding:20px;
-}
-.price{
-font-size:1.4rem;
-font-weight:bold;
-color:#F4AFC1;
-margin:10px 0;
-}
-.buy-btn{
-display:block;
-width:100%;
-padding:12px;
-border:none;
-background:#F4AFC1;
-color:white;
-border-radius:12px;
-cursor:pointer;
-font-size:1rem;
-margin-bottom:10px;
+margin-top:20px;
 }
 
-/* Google Form container */
-.google-form-container {
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    margin-top:20px;
+.next-btn{
+display:block;
+width:100%;
+padding:14px;
+background:#F4AFC1;
+color:white;
+border:none;
+border-radius:12px;
+font-size:1.1rem;
+text-align:center;
+margin-top:20px;
+cursor:pointer;
+text-decoration:none;
 }
 
 footer{
@@ -115,81 +88,52 @@ margin-top:40px;
 <body>
 
 <header>
-<h1> Press on Nails🩷</h1>
-<p> Handmade custom Press-On Nails</p>
-<a href="#shop" class="btn">Shop Now</a>
+<h1>Press on Nails🩷</h1>
+<p>Handmade custom Press-On Nails</p>
+<a href="#inspo" class="btn">Start Your Order</a>
 </header>
 
-<section id="shop">
-<h2 class="section-title">Choose Your Nail Set</h2>
-
-<div class="products">
-
-<!-- SIMPLE DESIGN -->
-<div class="card">
-<img src="https://raw.githubusercontent.com/BioTutorPrep/Press-on-nails/9bf32da4a0aa7d421b49c2710ae544e13337a196/IMG_2111.jpeg" alt="Simple Nail Design">
-<div class="card-content">
-<h3>Simple Nail Design</h3>
-<p>Hand-painted simple design. Comes with glue, mini file, acetone wipe and cuticle pusher.</p>
-<div class="price">£15</div>
-
-<a href="https://buy.stripe.com/dRm8wPbbPcMmba8cWGcMM00">
-<button class="buy-btn">Buy Now (£15)</button>
-</a>
-
-<h4 style="margin-top:20px; color:#F4AFC1;">Upload Your Inspo Photo</h4>
+<!-- ⭐ STEP 1 — INSPO FORM -->
+<section id="inspo">
+<h2 class="section-title">Step 1: Upload Your Inspo</h2>
 
 <div class="google-form-container">
-<!-- ⭐ REPLACE THIS IFRAME WITH YOUR GOOGLE FORM EMBED ⭐ -->
-<iframe src="YOUR_GOOGLE_FORM_EMBED_LINK_HERE"
-width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe 
+src="https://docs.google.com/forms/d/e/18DnCGOlI__q9paLMYyeNb1eqE1C9Ro9izeeeI3pRkdU/viewform?embedded=true"
+width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
+Loading…
+</iframe>
 </div>
 
-</div>
-</div>
-
-<!-- COMPLEX DESIGN -->
-<div class="card">
-<img src="https://raw.githubusercontent.com/BioTutorPrep/Press-on-nails/9bf32da4a0aa7d421b49c2710ae544e13337a196/IMG_2106.jpeg" alt="Complex Nail Design">
-<div class="card-content">
-<h3>Complex Nail Design</h3>
-<p>3D, gems, chrome, or detailed artwork. Comes with glue, mini file, acetone wipe and cuticle pusher.</p>
-<div class="price">£20</div>
-
-<a href="https://buy.stripe.com/8x2fZheo1aEecece0KcMM01">
-<button class="buy-btn">Buy Now (£20)</button>
-</a>
-
-<h4 style="margin-top:20px; color:#F4AFC1;">Upload Your Inspo Photo</h4>
-
-<div class="google-form-container">
-<!-- ⭐ REPLACE THIS IFRAME WITH YOUR GOOGLE FORM EMBED ⭐ -->
-<iframe src="YOUR_GOOGLE_FORM_EMBED_LINK_HERE"
-width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</div>
-
-</div>
-</div>
-
-</div>
+<a href="#size-guide" class="next-btn">Continue to Size Guide</a>
 </section>
 
+<!-- ⭐ STEP 2 — SIZE GUIDE FORM -->
 <section id="size-guide">
-<h2 class="section-title">Size Guide</h2>
-
-<p style="text-align:center; max-width:700px; margin:0 auto 30px; font-size:1.1rem;">
-To make sure your press-on nails fit perfectly, please measure your natural nails using a UK coin.
-Take a clear photo of each nail next to a <strong>10p</strong>, <strong>20p</strong>, or <strong>50p</strong> coin and upload it below.
-</p>
+<h2 class="section-title">Step 2: Upload Your Nail Measurements</h2>
 
 <div class="google-form-container">
-<h3 style="color:#F4AFC1; margin-bottom:10px;">Upload Your Nail Measurement Photos</h3>
-
-<!-- ⭐ REPLACE THIS IFRAME WITH YOUR MEASUREMENT GOOGLE FORM EMBED ⭐ -->
-<iframe src="YOUR_GOOGLE_MEASUREMENT_FORM_EMBED_LINK_HERE"
-width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe 
+src="https://docs.google.com/forms/d/e/15AADyBAKnw2NkGDgIPJLueREClgK0erTjtsDi-pgK1o/viewform?embedded=true"
+width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
+Loading…
+</iframe>
 </div>
 
+<a href="#payment" class="next-btn">Continue to Payment</a>
+</section>
+
+<!-- ⭐ STEP 3 — PAYMENT -->
+<section id="payment">
+<h2 class="section-title">Step 3: Choose Your Nail Set</h2>
+
+<div class="google-form-container">
+<h3 style="color:#F4AFC1;">Simple Design (£15)</h3>
+<a href="https://buy.stripe.com/dRm8wPbbPcMmba8cWGcMM00" class="next-btn">Pay £15</a>
+
+<h3 style="color:#F4AFC1; margin-top:30px;">Complex Design (£20)</h3>
+<a href="https://buy.stripe.com/8x2fZheo1aEecece0KcMM01" class="next-btn">Pay £20</a>
+</div>
 </section>
 
 <footer>
