@@ -1,85 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Submitting Your Order...</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-body{
-    background:#FFF7FA;
-    font-family:'Poppins',sans-serif;
-    margin:0;
-    padding:0;
-    text-align:center;
-    color:#333;
-}
-.container{
-    margin-top:120px;
-}
-.loader{
-    border:6px solid #f3f3f3;
-    border-top:6px solid #F4AFC1;
-    border-radius:50%;
-    width:60px;
-    height:60px;
-    animation:spin 1s linear infinite;
-    margin:20px auto;
-}
-@keyframes spin{
-    0%{transform:rotate(0deg);}
-    100%{transform:rotate(360deg);}
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Submitting Order…</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
-    <h2>Submitting Your Order...</h2>
+    <h2>Submitting Your Order…</h2>
     <p>Please wait a moment.</p>
-    <div class="loader"></div>
-</div>
 
-<!-- ⭐ AUTO-SUBMIT FORM AFTER PAYMENT ⭐ -->
-<form id="autoForm" 
-      action="https://formsubmit.co/pressednailsxo@gmail.com" 
-      method="GET">
+    <form id="finalForm" action="https://formsubmit.co/pressednailsxo@gmail.com" method="POST" enctype="multipart/form-data">
 
-    <!-- Redirect to thank-you page -->
-    <input type="hidden" name="_next" value="https://websitexo.github.io/thank-you.html">
-    <input type="hidden" name="_captcha" value="false">
+        <!-- Redirect to thank-you page -->
+        <input type="hidden" name="_next" value="thank-you.html">
 
-    <!-- Step 1 data -->
-    <input type="hidden" name="design_type" id="design_type">
-    <input type="hidden" name="length" id="length">
-    <input type="hidden" name="details" id="details">
-    <input type="hidden" name="email" id="email">
+        <!-- Prevent captcha -->
+        <input type="hidden" name="_captcha" value="false">
 
-    <!-- Step 2 data (photos cannot be sent via GET, but details will be sent) -->
-    <input type="hidden" name="thumb" id="thumb">
-    <input type="hidden" name="index" id="index">
-    <input type="hidden" name="middle" id="middle">
-    <input type="hidden" name="ring" id="ring">
-    <input type="hidden" name="pinky" id="pinky">
+        <!-- Customer details -->
+        <input type="hidden" name="customer_name" id="customer_name">
+        <input type="hidden" name="customer_email" id="customer_email">
+        <input type="hidden" name="nail_shape" id="nail_shape">
+        <input type="hidden" name="nail_length" id="nail_length">
+        <input type="hidden" name="inspo" id="inspo">
 
-</form>
+        <!-- Measurements photos -->
+        <input type="file" name="photo1" id="photo1">
+        <input type="file" name="photo2" id="photo2">
+        <input type="file" name="photo3" id="photo3">
 
-<script>
-// ⭐ Pull all saved data from sessionStorage
-document.getElementById('design_type').value = sessionStorage.getItem('design_type');
-document.getElementById('length').value = sessionStorage.getItem('length');
-document.getElementById('details').value = sessionStorage.getItem('details');
-document.getElementById('email').value = sessionStorage.getItem('email');
+    </form>
 
-// Photos cannot be sent via GET — FormSubmit does not support file uploads via auto-submit.
-// Instead, Step 2 already sends photos directly to your email BEFORE payment.
-// If you want photos AFTER payment, I can build a workaround.
+    <script>
+        // Load stored data from previous pages
+        document.getElementById("customer_name").value = localStorage.getItem("customer_name");
+        document.getElementById("customer_email").value = localStorage.getItem("customer_email");
+        document.getElementById("nail_shape").value = localStorage.getItem("nail_shape");
+        document.getElementById("nail_length").value = localStorage.getItem("nail_length");
+        document.getElementById("inspo").value = localStorage.getItem("inspo");
 
-// ⭐ Auto-submit the form
-document.getElementById('autoForm').submit();
-</script>
+        // Load stored photos
+        function loadPhoto(id, key) {
+            let fileData = localStorage.getItem(key);
+            if (!fileData) return;
+
+            let byteString = atob(fileData.split(',')[1]);
+            let mimeString = fileData.split(',')[0].split(':')[1].split(';')[0];
+
+            let ab = new ArrayBuffer(byteString.length);
+            let ia = new Uint8Array(ab);
+            for (let i = 0; i < byteString.length; i++) {
+                ia[i] = byteString.charCodeAt(i);
+            }
+
+            let file = new File([ab], key + ".jpg", { type: mimeString });
+            let dt = new DataTransfer();
+            dt.items.add(file);
+            document.getElementById(id).files = dt.files;
+        }
+
+        loadPhoto("photo1", "photo1");
+        loadPhoto("photo2", "photo2");
+        loadPhoto("photo3", "photo3");
+
+        // Auto-submit the form
+        document.getElementById("finalForm").submit();
+    </script>
 
 </body>
 </html>
