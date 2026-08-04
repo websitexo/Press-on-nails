@@ -3,73 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Upload Inspo & Nail Sizes</title>
+<title>Press-On Nails</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 body{background:#FFF7FA;font-family:'Poppins',sans-serif;margin:0;padding:0;color:#333;}
-header{background:linear-gradient(135deg,#F8C8DC,#FDE6EF);padding:60px 20px;text-align:center;color:white;}
-.section{padding:40px 8%;}
-.container{background:white;padding:25px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,.08);}
-label{font-weight:600;margin-top:15px;display:block;}
-input, textarea{
-width:100%;
-padding:12px;
-margin-top:8px;
-border-radius:10px;
-border:1px solid #ddd;
-font-size:1rem;
+header{text-align:center;padding:40px 20px;color:#F4AFC1;font-size:2rem;font-weight:600;}
+.products{
+padding:20px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
-.submit-btn{
-margin-top:20px;
-padding:14px;
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+text-align:center;
+padding-bottom:20px;
+}
+.card:hover{transform:translateY(-5px);}
+.card img{width:100%;height:300px;object-fit:cover;}
+.price{font-size:1.4rem;font-weight:bold;color:#F4AFC1;margin:10px 0;}
+.btn{
+display:block;
+width:80%;
+margin:10px auto;
+padding:12px;
 background:#F4AFC1;
 color:white;
-text-align:center;
 border-radius:12px;
 text-decoration:none;
-font-size:1.1rem;
-border:none;
-cursor:pointer;
-width:100%;
+font-size:1rem;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Upload Your Inspo & Nail Sizes</h1>
-<p>Submit everything here — no Google Forms needed.</p>
-</header>
+<header>Press-On Nails</header>
 
-<section class="section">
-<div class="container">
+<section class="products">
 
-<form action="https://formsubmit.co/pressednailsxo@gmail.com" method="POST" enctype="multipart/form-data">
-
-<!-- Prevent spam -->
-<input type="hidden" name="_captcha" value="false">
-
-<!-- Redirect after submit -->
-<input type="hidden" name="_next" value="https://websitexo.github.io/thank-you.html">
-
-<label>Upload Inspo Photos (up to 3)</label>
-<input type="file" name="inspo1" accept="image/*">
-<input type="file" name="inspo2" accept="image/*">
-<input type="file" name="inspo3" accept="image/*">
-
-<label>Nail Measurements (Thumb → Pinky)</label>
-<input type="text" name="measurements" placeholder="Example: 16mm, 14mm, 13mm, 12mm, 10mm" required>
-
-<label>Notes / Design Details</label>
-<textarea name="notes" rows="5" placeholder="Tell me your colours, shape, length, gems, chrome, etc."></textarea>
-
-<button class="submit-btn" type="submit">Submit Order</button>
-
-</form>
-
+<div class="card">
+<img src="https://github.com/websitexo/Press-on-nails/raw/66ce5cfdf74c53f9b85d5ae1577aad078d0f41a0/IMG_2639.jpeg">
+<h3>Simple Nail Design</h3>
+<p>Hand-painted simple design. Comes with glue, mini file, acetone wipe and cuticle pusher.</p>
+<div class="price">£15</div>
+<a href="simple-step1.html" class="btn">Buy Now (£15)</a>
 </div>
+
+<div class="card">
+<img src="https://github.com/websitexo/Press-on-nails/raw/66ce5cfdf74c53f9b85d5ae1577aad078d0f41a0/IMG_6073.jpeg">
+<h3>Complex Nail Design</h3>
+<p>3D, gems, chrome, or detailed artwork. Comes with glue, mini file, acetone wipe and cuticle pusher.</p>
+<div class="price">£20</div>
+<a href="complex-step1.html" class="btn">Buy Now (£20)</a>
+</div>
+
 </section>
 
 </body>
