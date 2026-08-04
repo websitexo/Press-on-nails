@@ -6,6 +6,13 @@
 <title>Press on Nails</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- ⭐ UPLOADCARE ⭐ -->
+<script>
+  UPLOADCARE_PUBLIC_KEY = "YOUR_PUBLIC_KEY_HERE";
+  UPLOADCARE_TABS = "file camera url";
+</script>
+<script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+
 <style>
 *{
 margin:0;
@@ -119,6 +126,14 @@ text-align:center;
 color:white;
 margin-top:40px;
 }
+
+/* Uploadcare styling */
+.uploadcare--widget {
+    width: 100%;
+    background: #F8C8DC;
+    border-radius: 12px;
+    padding: 10px;
+}
 </style>
 </head>
 
@@ -147,12 +162,15 @@ margin-top:40px;
 <button class="buy-btn">Buy Now (£15)</button>
 </a>
 
-<form action="https://formspree.io/f/mlgyrqnk" method="POST" enctype="multipart/form-data">
+<form action="https://formspree.io/f/mlgyrqnk" method="POST">
 <input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
+<input type="email" name="_replyto" placeholder="Your Email" required>
 <textarea name="details" placeholder="Describe your inspo and length" required></textarea>
+
 <label>Upload Inspo Photo:</label>
-<input type="file" name="inspo" accept="image/*" required>
+<input type="hidden" role="uploadcare-uploader" name="inspo" data-crop="disabled" />
+
+<input type="hidden" name="_subject" value="New Simple Design Inspo">
 <button type="submit">Send Inspo</button>
 </form>
 
@@ -171,12 +189,15 @@ margin-top:40px;
 <button class="buy-btn">Buy Now (£20)</button>
 </a>
 
-<form action="https://formspree.io/f/mlgyrqnk" method="POST" enctype="multipart/form-data">
+<form action="https://formspree.io/f/mlgyrqnk" method="POST">
 <input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
+<input type="email" name="_replyto" placeholder="Your Email" required>
 <textarea name="details" placeholder="Describe your inspo and length" required></textarea>
+
 <label>Upload Inspo Photo:</label>
-<input type="file" name="inspo" accept="image/*" required>
+<input type="hidden" role="uploadcare-uploader" name="inspo" data-crop="disabled" />
+
+<input type="hidden" name="_subject" value="New Complex Design Inspo">
 <button type="submit">Send Inspo</button>
 </form>
 
@@ -205,15 +226,17 @@ Take a clear photo of each nail next to a <strong>10p</strong>, <strong>20p</str
 <li>Upload the photos using the form below.</li>
 </ul>
 
-<form action="https://formspree.io/f/mlgyrqnk" method="POST" enctype="multipart/form-data" style="display:flex; flex-direction:column; gap:12px;">
+<form action="https://formspree.io/f/mlgyrqnk" method="POST">
 <input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
+<input type="email" name="_replyto" placeholder="Your Email" required>
+
 <label>Upload Your Nail Measurement Photos:</label>
-<input type="file" name="measurement_photos" accept="image/*" multiple required>
+<input type="hidden" role="uploadcare-uploader" name="measurement_photos" data-multiple="true" />
+
 <textarea name="notes" placeholder="Any extra details (optional)"></textarea>
-<button type="submit" style="background:#F4AFC1; color:white; padding:12px; border:none; border-radius:10px; cursor:pointer; font-size:1rem;">
-Send Measurements
-</button>
+
+<input type="hidden" name="_subject" value="New Nail Measurement Upload">
+<button type="submit">Send Measurements</button>
 </form>
 
 </div>
