@@ -1,1 +1,66 @@
-<a href="upload.html" class="next-btn">Continue</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complex Design – Step 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{background:#FFF7FA;font-family:'Poppins',sans-serif;margin:0;padding:0;color:#333;}
+header{
+background:linear-gradient(135deg,#F8C8DC,#FDE6EF);
+padding:50px 20px;text-align:center;color:white;
+}
+.section{padding:40px 8%;}
+.container{
+background:white;padding:25px;border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+label{font-weight:600;margin-top:15px;display:block;}
+input, textarea{
+width:100%;padding:12px;margin-top:8px;
+border-radius:10px;border:1px solid #ddd;font-size:1rem;
+}
+.next-btn{
+margin-top:20px;padding:14px;background:#F4AFC1;color:white;
+border-radius:12px;text-decoration:none;font-size:1.1rem;
+display:block;text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Complex Nail Design</h1>
+<p>Step 1: Upload Inspo & Details</p>
+</header>
+
+<section class="section">
+<div class="container">
+
+<form action="measurements-complex.html" method="GET">
+
+<label>Upload Inspo Photo</label>
+<input type="file" required>
+
+<label>Preferred Length</label>
+<input type="text" name="length" placeholder="Short / Medium / Long" required>
+
+<label>Design Details</label>
+<textarea name="details" rows="5" placeholder="Colours, gems, chrome, 3D, etc." required></textarea>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<button class="next-btn" type="submit">Continue</button>
+
+</form>
+
+</div>
+</section>
+
+</body>
+</html>
+
